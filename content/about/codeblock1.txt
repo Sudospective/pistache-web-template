@@ -1,0 +1,21 @@
+// ...
+
+#include "pages/example.h"
+
+// ...
+
+class Pages {
+ public:
+  static void CreateRoutes(Pistache::Rest::Router& router) {
+    RouteMap routes = {
+      {"/", Pages::GetStaticPage<Home>},
+      {"/about", Pages::GetStaticPage<About>},
+      {"/numbers/:num", Pages::GetDynamicPage<Numbers>}
+      {"/example", Pages::GetStaticPage<Example>},
+    };
+
+    //...
+  }
+
+  // ...
+};

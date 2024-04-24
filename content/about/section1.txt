@@ -1,0 +1,3 @@
+My name's Sudo! You probably know me for the things I've made in NotITG, Project OutFox, and other rhythm games, but I also do web dev and software engineering! This website is proof of it. The entirety of it is written in C++, with text files to fill in paragraphs.
+
+This isn't my main website; you can find that by clicking the button below. Or you can use the home button to return to the home page of this website.

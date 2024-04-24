@@ -1,0 +1,7 @@
+CodeBlock code;
+std::ifstream file("content/home-code.txt");
+std::ostringstream text;
+text << file.rdbuf();
+file.close();
+code.SetInnerHTML(text.str());
+section.AddChild(code);

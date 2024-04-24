@@ -1,0 +1,5 @@
+This is a template website built with Pistache in C++. It includes some base components and example pages that are shown within the site, all compiled into an executable.
+
+Use the banner above to navigate to other pages, and the buttons below to visit other related sites.
+
+Below is a sample code block:

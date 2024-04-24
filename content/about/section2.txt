@@ -1,0 +1,3 @@
+This is a website template for the Pistache library. Since it's written in C++, content generation is fast. However, images require a proxy or server to host, such as Nginx or Apache.
+
+NOTE: You may want to change the port that the Pistache server runs on before running a production build. You can do this by adding the port number as an argument in the command line when running the program.
