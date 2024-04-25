@@ -27,6 +27,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "pages/home.h"
 #include "pages/about.h"
 #include "pages/numbers.h"
+#include "pages/cat.h"
 
 using Pistache::Http::Code;
 using Pistache::Http::ResponseWriter;
@@ -41,6 +42,7 @@ class Pages {
       {"/", Pages::GetStaticPage<Home>},
       {"/about", Pages::GetStaticPage<About>},
       {"/numbers/:num", Pages::GetDynamicPage<Numbers>},
+      {"/cat/*", Pages::GetDynamicPage<Cat>},
     };
 
     Pages::SetupRoutes(router, routes);
@@ -51,7 +53,11 @@ class Pages {
   static void SetupRoutes(Router& router, RouteMap routes) {
     // Loop through routes and bind each URL to its function
     for (const auto& [url, func] : routes) {
-      Pistache::Rest::Routes::Get(router, url, Pistache::Rest::Routes::bind(func));
+      Pistache::Rest::Routes::Get(
+        router,
+        url,
+        Pistache::Rest::Routes::bind(func)
+      );
     }
   }
   template <typename StaticPageType>
