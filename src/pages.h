@@ -1,3 +1,20 @@
+/*
+Copyright (C) 2024 Sudospective
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
 #ifndef PAGES_H_
 #define PAGES_H_
 
@@ -34,11 +51,7 @@ class Pages {
   static void SetupRoutes(Router& router, RouteMap routes) {
     // Loop through routes and bind each URL to its function
     for (const auto& [url, func] : routes) {
-      Pistache::Rest::Routes::Get(
-        router,
-        url,
-        Pistache::Rest::Routes::bind(func)
-      );
+      Pistache::Rest::Routes::Get(router, url, Pistache::Rest::Routes::bind(func));
     }
   }
   template <typename StaticPageType>
