@@ -18,6 +18,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #ifndef HYPERLINK_H_
 #define HYPERLINK_H_
 
+#include <string>
+
 #include "element.h"
 
 class Hyperlink : public Element {

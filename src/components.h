@@ -15,23 +15,18 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#ifndef DYNAMIC_PAGE_H_
-#define DYNAMIC_PAGE_H_
+#ifndef COMPONENTS_H_
+#define COMPONENTS_H_
 
-#include <string>
+#include "components/banner.h"
+#include "components/codeblock.h"
+#include "components/dynamic_page.h"
+#include "components/element.h"
+#include "components/flexbox.h"
+#include "components/hyperlink.h"
+#include "components/image.h"
+#include "components/paragraph.h"
+#include "components/section.h"
+#include "components/static_page.h"
 
-#include <pistache/router.h>
-
-#include "static_page.h"
-
-using Pistache::Rest::Request;
-using Pistache::Http::Code;
-
-class DynamicPage : public StaticPage {
- public:
-  DynamicPage(std::string title = "")
-    : StaticPage(title) {}
-  virtual Code GetCode() = 0;
-};
-
-#endif // DYNAMIC_PAGE_H_
+#endif // COMPONENTS_H_

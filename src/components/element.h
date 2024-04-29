@@ -19,8 +19,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #define ELEMENT_H_
 
 #include <string>
-#include <vector>
 #include <map>
+#include <vector>
 
 class Element {
  public:

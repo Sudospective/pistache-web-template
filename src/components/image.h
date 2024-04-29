@@ -18,6 +18,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #ifndef IMAGE_H_
 #define IMAGE_H_
 
+#include <string>
+
 #include "element.h"
 
 class Image : public Element {

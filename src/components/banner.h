@@ -18,6 +18,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #ifndef BANNER_H_
 #define BANNER_H_
 
+#include <string>
+#include <map>
+
 #include "element.h"
 
 class Banner : public Element {

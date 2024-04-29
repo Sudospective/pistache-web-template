@@ -15,38 +15,20 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#ifndef NUMBERS_H_
-#define NUMBERS_H_
+#ifndef FLEXBOX_H_
+#define FLEXBOX_H_
 
-#include "../components.h"
+#include "element.h"
 
-class Numbers : public DynamicPage {
+class FlexBox : public Element {
  public:
-  Numbers(const Request& req) : DynamicPage("Numbers") {
-    int num = req.param(":num").as<int>();
-
-    Section section1("Your Number");
-
-    Element numElem("p");
-    numElem.SetInnerHTML(std::to_string(num));
-
-    Element box("div");
-    box.SetStyle({
+  FlexBox() : Element("div") {
+    SetStyle({
       {"display", "flex"},
       {"width", "100\%"},
       {"justify-content", "center"}
     });
-    
-    Hyperlink number("/numbers/" + std::to_string(rand()), "New Number");
-    box.AddChild(number);
-
-    section1.AddChild(numElem);
-    section1.AddChild(box);
-    AddChild(section1);
-  }
-  Code GetCode() {
-    return Code::Ok;
   }
 };
 
-#endif // NUMBERS_H_
+#endif // FLEXBOX_H_

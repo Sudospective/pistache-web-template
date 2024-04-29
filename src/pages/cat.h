@@ -18,8 +18,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #ifndef CAT_H_
 #define CAT_H_
 
-#include "../components/dynamic_page.h"
-#include "../components/section.h"
+#include "../components.h"
 
 class Cat : public DynamicPage {
  public:

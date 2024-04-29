@@ -18,12 +18,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #ifndef ABOUT_H_
 #define ABOUT_H_
 
-#include "../components/banner.h"
-#include "../components/element.h"
-#include "../components/hyperlink.h"
-#include "../components/paragraph.h"
-#include "../components/section.h"
-#include "../components/static_page.h"
+#include "../components.h"
 
 class About : public StaticPage {
  public:

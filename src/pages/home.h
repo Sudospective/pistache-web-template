@@ -18,14 +18,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #ifndef HOME_H_
 #define HOME_H_
 
-#include "../components/banner.h"
-#include "../components/codeblock.h"
-#include "../components/element.h"
-#include "../components/hyperlink.h"
-#include "../components/image.h"
-#include "../components/paragraph.h"
-#include "../components/section.h"
-#include "../components/static_page.h"
+#include "../components.h"
 
 class Home : public StaticPage {
  public:
@@ -42,12 +35,7 @@ class Home : public StaticPage {
       "Sudospective banner"
     );
 
-    Element box("div");
-    box.SetStyle({
-      {"display", "flex"},
-      {"width", "100\%"},
-      {"justify-content", "center"}
-    });
+    FlexBox box;
 
     Hyperlink subo("https://sudospective.net", "Main Website", true);
     Hyperlink onedev("https://git.sudospective.net", "SuboGit", true);
