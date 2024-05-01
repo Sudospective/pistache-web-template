@@ -19,6 +19,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #define PARAGRAPH_H_
 
 #include <fstream>
+#include <sstream>
 #include <string>
 
 #include "element.h"
